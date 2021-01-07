@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <title>jQuery - Événements</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .ma-classe {
+            text-transform: uppercase;
+            color:  rgb(68, 32, 32);
+            background-color: rgb(68, 32, 32);
+        }
+    </style>
+  </head>
+  <body class="bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Cours jQuery</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Les événements<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Menu
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="../01-selecteurs/01-selecteurs.html">Sélecteurs</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+   <main class="container bg-light">
+
+        <header class="jumbotron">
+            <h1 class="display-4">Cours jQuery</h1>
+            <p class="lead" style="display: none">Write less, do more !</p>
+            <p class="lead">Je change de paragraphe avec le jQuery</p>
+            <hr class="my-2">
+            <p></p>
+        </header>
+        
+        <div class="row justify-content-center my-4 p-4">
+            <div class="col-md-2 text-center">
+                <button id="btn1" class="btn btn-primary"> Simple clic</button>
+            </div>
+            <div class="col-md-2 text-center">
+                <button id="btn2" class="btn btn-info">Double clic</button>
+            </div>
+            <div class="col-md-2 text-center">
+                <button id="btn3" class="btn btn-success">Bouton 3</button>
+            </div>
+            <div class="col-md-2 text-center">
+                <button id="btn4" class="btn btn-warning">toggleClass</button>
+            </div>
+            <div class="col-md-2 text-center">
+                <button id="btn5" class="btn btn-danger">Bouton 5</button>
+            </div>
+            <div class="col-md-2 text-center">
+                <button id="btn6" class="btn btn-dark">Bouton 6</button>
+            </div>
+        </div> <!-- fin row -->
+
+        <div class="row my-4 p-3">
+            <div class="col-12 text-center">
+                <h2>Les évènements </h2>
+            </div>
+            <div class="col-md-4 p-2">
+                <p>Très utilisés, les évènements se déclenchent quand le visiteur effectue quelque chose qui correspond au script.</p>
+            </div>
+            <div class="col-md-5 p-2">
+                <ul>
+                    <div class="row">
+                        <div class="col-6">
+                            <li><code>.ready()</code></li>
+                            <li><code>.click()</code></li>
+                            <li><code>.dblclick()</code></li>
+                            <li><code>.hover()</code></li>
+                            <li><code>.mouseleave()</code></li>
+                            <li><code>.mousedown()</code></li>
+                        </div>
+                        <div class="col-6">
+                            <li><code>.mouseup()</code></li>
+                            <li><code>.scroll()</code></li>
+                            <li><code>.keydown()</code></li>
+                            <li><code>.keyup()</code></li>
+                            <li><code>.keypress()</code></li>
+                        </div>
+                    </div>
+                </ul>
+            </div><!-- fin col -->
+            <div class="col-md-3 p-2">
+                <p>Exemple : <br>
+                <code>$('h1).click(function(){<br>
+                    //code à éxécuter <br>
+                    });
+                </code></p>
+            </div>
+        </div><!-- fin row -->
+
+        <div class="row my-4 p-3">
+            <div class="col-12">
+                <h2 class="text-center">Les méthodes</h2>
+            </div>
+            <div class="col-md-4 p-2">
+                <p>Par l'intermédiaire des méthodes, on va effectuer une action précise sur un ou plusieurs éléments du DOM. On peut bien évidemment assigner plusieurs méthodes à un seul élément cible.</p>
+            </div>
+            <div class="col-md-4 p-2">
+                <ul>
+                    <li>.css() // ex. <code>$('p').css('color','blue');</code> Attention à l'absence de la virgule lors de la dernière propriété ccs apportée.</li>
+                    <li>.html()</li>
+                    <li>.text()</li>
+                    <li>.attr()</li>
+                    <li>.addClass</li>
+                    <li>Etc.</li>
+                    <li><a href="https://api.jquery.com/category/manipulation/">Les méthodes sur le site de JQuery</a></li>
+                </ul>
+            </div><!-- fin col -->
+        </div>
+        <div class="row my-4 p-3">
+            <div class="col-12">
+                <h2 class="text-center">Les effets</h2>
+            </div>
+            <div class="col-md-4">
+                <p>Vous pouvez apporter des effets particuliers et très simples d'utilisation à l'élément cible.</p>
+            </div>
+            <div class="col-md-4">
+                <ul>
+                    <li><code>.hide()</code></li>
+                    <li><code>.show()</code></li>
+                    <li><code>.fadeOut()</code></li>
+                    <li><code>.fadeIn()</code></li>
+                    <li><code>.toggle()</code></li>
+                    <li><code>.animate()</code></li>
+                    <li>Etc.</li>
+                    <li><a href="https://api.jquery.com/category/effects/"> Les effets sur le site de JQuery </a></li>
+                </ul>
+            </div><!-- fin col -->
+        </div>
+    </main>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="../jquery/jquery-3.5.1.js"></script>
+    <script>
+        // comment démarrer une fonction
+        // $(document).ready(function() {
+            //le code a exécuter ici
+        // })
+
+        //1- 1ere fonction sur le bouton 1
+        $(function() {
+            $('h1').append(' - Les événements'); 
+            $('#btn1').click(function() {
+                $('h1').css({
+                    'color' : '#6666FF',
+                    'font-weight' : '800'
+                })
+            })
+        });
+
+
+        // 2- 2eme fontion spur le bouton 2 
+        $('#btn2').dblclick(function() {
+            $('body').removeClass('bg-dark').css({
+                'background-color': '#000'
+            })
+        });
+
+        // 3- 3eme fonction sur le bouton 3
+        $('#btn3').click(function() {
+            $('p').toggle();
+        });
+
+        //4- 4eme fonction avec bouton 4
+        $('#btn4').click(function() {
+            $('h1').toggleClass('ma-classe')
+        })
+
+        //5- 5eme fonction avec bouton 5
+        // $('#btn5').mouseenter(function() {
+        //     $('main').removeClass('bg-light').addClass('ma-classe')
+        // });
+        // $('#btn5').mouseleave(function() {
+        //     $('main').removeClass('ma-classe').addClass('bg-light');
+        // });
+        //la meme chose avec hover
+
+        $('#btn5').hover(function() {
+            $('main').removeClass('bg-light').addClass('ma-classe')
+        },
+        function() {
+            $('main').removeClass('ma-classe').addClass('bg-light')
+        }
+        );
+
+        // 6-6eme fonction avec bouton6
+
+        function animation(){
+            $('h1').animate({margin :'50px' },3000);
+            };
+
+            $('#btn6').click(function() {
+                $('h1').on(animation());
+            });
+        
+        //7- la méthone on()
+        $('p').on('click', function() {
+            $(this).append(' Coucou !')
+        });
+
+
+    </script>
+  </body>
+</html>
